@@ -1,9 +1,23 @@
 import React from "react"
-import Home from "./pages/Home";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+
+import Matrix from "./pages/Matrix";
+import Header from "./components/Header";
 
 function App() {
   return (
-    <Home />
+    <Router>
+      <Header />
+      <Switch>
+        <Route path="/">
+          <Matrix />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
