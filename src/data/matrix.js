@@ -1,10 +1,10 @@
-import FormMatrix from "../components/FormMatrix";
+import Form from "../components/Form";
 
 const arrayTitles = [
     {
         id: 1,
         title: "Matrix",
-        content: <FormMatrix />
+        content: <Form />
     },
     {
         id: 2,

@@ -8,7 +8,7 @@ const Feed = (props) => {
         <>
             {content.map(con => (
                 <div key={con.id}>
-                    <h1 className="feed__title">{con.title}</h1>
+                    <h1 className="feed__title" id={con.id}>{con.title}</h1>
                     {con.content}
                 </div>
             ))}

@@ -1,41 +1,42 @@
-import React, { useState, useEffect } from 'react';
-import { validateOperation, results } from "../utils/switchedOperations";
+import React, { useState } from 'react';
 
-const FormMatrix = () => {
-    const [operation, setOperation] = useState("");
-    const [operationOk, setOperationOk] = useState({});
-    const validate = validateOperation(operation);
+const FormMatrix = (props) => {
+    const { id } = props;
+    const [formData, setFormData] = useState({
+        matrix: "",
+        rows: 0,
+        column: 0,
+    });
 
-    const handleOperation = (e) => {
-        setOperation(e.target.value.toLowerCase());
-    }
-    useEffect(() => {
-        setOperationOk({
-            isOperation: validate.isOperation,
-            twoMatrix: validate.twoMatrix,
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value,
         });
-    }, [validate.isOperation, validate.twoMatrix]);
-
+    }
+    sessionStorage.setItem(`matrix-${id}`, JSON.stringify(formData));
 
     return(
-        <form className="feed__form-matrix">
+        <div className="form-matrix" id={`form-matrix-${id}`}>
             <div>
-                <label htmlFor="operation">Operation</label>
-                <input id="operation" className="feed__form-input" onChange={handleOperation}/>
+                <label htmlFor={`matrix-${id}`}>Matrix</label>
+                <input id={`matrix-${id}`} name="matrix" className="feed__form-input"
+                    onChange={handleChange}
+                />
             </div>
             <div>
-                <label htmlFor="rows-1">Rows</label>
-                <input id="rows-1" className="feed__form-input" />
+                <label htmlFor={`rows-${id}`}>Rows</label>
+                <input id={`rows-${id}`} name="rows" className="feed__form-input" type="number"
+                    onChange={handleChange}
+                />
             </div>
             <div>
-                <label htmlFor="column-1">Columns</label>
-                <input id="column-1" className="feed__form-input" />
+                <label htmlFor={`column-${id}`}>Columns</label>
+                <input id={`column-${id}`} name="column" className="feed__form-input" type="number"
+                    onChange={handleChange}
+                />
             </div>
-            <button className="feed__form-button" id="matrix-button"
-                disabled={!operationOk.isOperation}>
-                {operationOk.twoMatrix ? "next" : "send"}
-            </button>
-        </form>
+        </div>
     )
 }
 

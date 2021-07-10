@@ -36,4 +36,5 @@ p {
 .feed {
   flex: 3;
   padding: 1.5em;
+  scroll-behavior: smooth;
 }
