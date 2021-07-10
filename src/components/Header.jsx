@@ -14,16 +14,16 @@ const Header = () => {
     const location = useLocation();
 
     const handleDarkMood = () => {
-        if(darkMood){
+        if(darkMood === "true"){
             localStorage.setItem("dark-mood", false);
             return setDarkMood(false);
         }
         localStorage.setItem("dark-mood", true);
-        setDarkMood(true);
+        setDarkMood("true");
     }
 
     return(
-        <header className={`navigation ${darkMood && "navigation__dark-mood"}`}>
+        <header className={`navigation ${darkMood === "true" && "navigation__dark-mood"}`}>
             <Link to="/" className="navigation__logo">matrix</Link>
             <nav className="navigation__items">
                 <div>
@@ -53,7 +53,7 @@ const Header = () => {
                 <div>
                     <i  className="navigation__item navigation__item--icon"
                         onClick={handleDarkMood}>
-                        {darkMood ?  <BsMoon /> : <BsSun />}
+                        {darkMood === "true" ?  <BsMoon /> : <BsSun />}
                     </i>
                     <i className="navigation__item navigation__item--icon language__drop-down">
                         <SiUnrealengine />

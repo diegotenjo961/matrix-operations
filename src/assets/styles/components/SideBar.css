@@ -1,0 +1,33 @@
+.container__sidebar {
+    max-width: 280px;
+    width: 100%;
+    will-change: transform;
+}
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    overflow: scroll;
+    padding: 1.5em;
+    position: sticky;
+    scrollbar-width: none;
+    top: 50px;
+}
+.sidebar::-webkit-scrollbar {
+    width: 0;
+    opacity: 0;
+}
+.sidebar__item {
+    font-size: 16.5px;
+    margin: .6em 0;
+    color: #2b3a42;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-left: 2px dotted #2b3a42;
+    padding-left: 10px;
+    transition: .25s all;
+}
+.sidebar__item:hover {
+    color: #32434a;
+    border-left: 0.5px dotted #32434a;
+}
