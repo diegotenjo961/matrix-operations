@@ -33,7 +33,7 @@ p {
   max-width: 1024px;
   width: 100%;
 }
-.page {
+.feed {
   flex: 3;
   padding: 1.5em;
 }

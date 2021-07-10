@@ -1,8 +1,10 @@
+import FormMatrix from "../components/FormMatrix";
+
 const arrayTitles = [
     {
         id: 1,
         title: "Matrix",
-        content: ""
+        content: <FormMatrix />
     },
     {
         id: 2,
