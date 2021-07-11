@@ -30,7 +30,7 @@ const navigationItems = [
         id: 5,
         icon: true,
         content: <SiTwitter />,
-        pathname: "https://github.com/tenjodiego961/matrix-operations/",
+        pathname: "https://twitter.com/DiegoTenjo7",
     }
 ]
 

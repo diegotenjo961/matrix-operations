@@ -10,67 +10,64 @@ export const results = (operation) => {
             return null
     }
 }
+const state = {
+    isOperation: true,
+    twoMatrix: false,
+    operation: null
+}
 
 export const validateOperation = (operation) => {
     switch(operation){
         case "determinant":
             return {
-                isOperation: true,
-                twoMatrix: false,
+                ...state,
                 operation: "determinant",
             }
         case "det":
             return {
-                isOperation: true,
-                twoMatrix: false,
+                ...state,
                 operation: "determinant",
             }
         case "determinante":
             return {
-                isOperation: true,
-                twoMatrix: false,
+                ...state,
                 operation: "determinant",
             }
         case "adj":
             return {
-                isOperation: true,
-                twoMatrix: false,
+                ...state,
                 operation: "adj",
             }
         case "adjunta":
             return {
-                isOperation: true,
-                twoMatrix: false,
+                ...state,
                 operation: "adj",
             }
         case "inverse":
             return {
-                isOperation: true,
-                twoMatrix: false,
+                ...state,
                 operation: "inverse",
             }
         case "inversa":
             return {
-                isOperation: true,
-                twoMatrix: false,
+                ...state,
                 operation: "inverse",
             }
         case "inv":
             return {
-                isOperation: true,
-                twoMatrix: false,
+                ...state,
                 operation: "inverse",
             }
         case "-1":
             return {
-                isOperation: true,
-                twoMatrix: false,
+                ...state,
                 operation: "inverse",
             }
         default:
             return {
+                ...state,
                 isOperation: false,
-                operation: null,
+                operation: operation,
             }
     }
 }

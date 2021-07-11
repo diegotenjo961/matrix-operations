@@ -1,10 +1,14 @@
 import Form from "../components/Form";
+import SelectMatrix from "../components/SelectMatrix";
 
 const arrayTitles = [
     {
         id: 1,
-        title: "Matrix",
-        content: <Form />
+        title: "matrix",
+        content: <>
+                    <Form />
+                    <SelectMatrix />
+                </>
     },
     {
         id: 2,

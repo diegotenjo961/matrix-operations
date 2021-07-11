@@ -2,21 +2,25 @@ import React, { useState, useEffect } from 'react';
 import { validateOperation } from "../utils/switchedOperations";
 import FormMatrix from "./FormMatrix";
 
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { selectOperation } from '../reducers/operation';
+import { setOperation } from '../reducers/operation';
+
 const Form = () => {
-    const [operation, setOperation] = useState("");
     const [validate, setValidate] = useState({});
+    const dispatch = useDispatch();
+    const operation = useSelector(selectOperation);
 
     const handleChange = (e) => {
-        setOperation(e.target.value.toLowerCase());
+        dispatch(setOperation({
+            operation: e.target.value.toLowerCase(),
+        }))
     }
-    sessionStorage.setItem("operation", operation);
 
     useEffect(() => {
-        setValidate(validateOperation(operation));
-    }, [operation]);
-
-    console.log(operation);
-    console.log(validate);
+        setValidate(validateOperation(operation.operation));
+    },[dispatch, operation]);
 
     return(
         <div>
