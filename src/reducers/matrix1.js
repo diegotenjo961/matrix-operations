@@ -4,7 +4,8 @@ const initialState = {
     matrix1: {
         matrix: "",
         rows: "",
-        column: "",
+        columns: "",
+        name: "a",
     }
 }
 

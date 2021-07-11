@@ -1,0 +1,23 @@
+.matrix {
+    display: flex;
+    justify-content: center;
+    transition: .25s all;
+}
+
+.matrix__name {
+    padding: 20px;
+    font-size: 1.5rem;
+}
+
+.matrix__grid {
+    padding: 0 10px;
+    display: grid;
+    border-right: 2px solid #32434a;
+    border-left: 2px solid #32434a;
+}
+
+.matrix__grid-el {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
