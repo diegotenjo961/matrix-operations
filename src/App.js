@@ -8,6 +8,8 @@ import {
 import Matrix from "./pages/Matrix";
 import Header from "./components/Header";
 
+import "./assets/styles/darkMoodApp.css";
+
 function App() {
   return (
     <Router>

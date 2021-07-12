@@ -9,7 +9,6 @@ const Matrix = (props) => {
     const { id } = props;
     const matrix = useSelector(id === "1" ? selectMatrix1 : selectMatrix2);
     const arrayMatrix = matrix.matrix.split(" ");
-    console.log(matrix);
 
     return(
         <div className="matrix">

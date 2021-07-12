@@ -28,6 +28,5 @@
     transition: .25s all;
 }
 .sidebar__item:hover {
-    color: #32434a;
     border-left: 0.5px dotted #32434a;
 }

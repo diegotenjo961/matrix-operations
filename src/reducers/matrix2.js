@@ -13,7 +13,7 @@ const matrix2Reducer  = createSlice({
     name: "matrix",
     initialState,
     reducers: {
-        setMatrix1: (state, action) => {
+        setMatrix2: (state, action) => {
             state.matrix2 = action.payload;
         }
     }

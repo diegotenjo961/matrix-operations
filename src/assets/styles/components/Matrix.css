@@ -1,7 +1,7 @@
 .matrix {
     display: flex;
     justify-content: center;
-    transition: .25s all;
+    padding: 20px;
 }
 
 .matrix__name {

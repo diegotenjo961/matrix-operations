@@ -1,0 +1,19 @@
+.container__dark-mood {
+    color: #f9f9f9;
+}
+.container__dark-mood a {
+    color: #e8e8e8;
+    border-color: #e8e8e8;
+}
+.container__dark-mood h1 {
+    color: #f9f9f9;
+}
+.container__dark-mood input {
+    color: #e5e5e5;
+}
+.container__dark-mood button {
+    color: #f9f9f9;
+}
+.app__dark-mood {
+    background: rgba(16, 22, 25, 0.99);
+}

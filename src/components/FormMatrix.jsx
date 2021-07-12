@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setMatrix1, selectMatrix1 } from "../reducers/matrix1"
 import { setMatrix2, selectMatrix2 } from "../reducers/matrix2"
 
@@ -35,25 +34,26 @@ const FormMatrix = (props) => {
     }
 
     return(
-        <div className="form-matrix" id={`form-matrix-${id}`}>
-            <div>
-                <label htmlFor={`matrix-${id}`}>Matrix</label>
-                <input id={`matrix-${id}`} name="matrix" className="feed__form-input"
+        <div className="form-matrix">
+            <strong>{matrix.name.toUpperCase()}</strong>
+            <div className="feed__form-group">
+                <label htmlFor={`column-${id}`} className="feed__form-label">Columns</label>
+                <input id={`column-${id}`} name="columns" className="feed__form-input" type="number"
                     onChange={handleChange}
                 />
-                {regMatrix && <p className="text-danger">Just receive numbers and space</p>}
             </div>
-            <div>
-                <label htmlFor={`rows-${id}`}>Rows</label>
+            <div className="feed__form-group">
+                <label htmlFor={`rows-${id}`} className="feed__form-label">Rows</label>
                 <input id={`rows-${id}`} name="rows" className="feed__form-input" type="number"
                     onChange={handleChange}
                 />
             </div>
-            <div>
-                <label htmlFor={`column-${id}`}>Columns</label>
-                <input id={`column-${id}`} name="columns" className="feed__form-input" type="number"
+            <div className="feed__form-group">
+                <label htmlFor={`matrix-${id}`} className="feed__form-label">Matrix</label>
+                <input id={`matrix-${id}`} name="matrix" className="feed__form-input"
                     onChange={handleChange}
                 />
+                {regMatrix && <p className="text-danger">Just receive numbers and space</p>}
             </div>
         </div>
     )

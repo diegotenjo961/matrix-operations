@@ -7,6 +7,8 @@ import { useSelector } from "react-redux";
 import { selectOperation } from '../reducers/operation';
 import { setOperation } from '../reducers/operation';
 
+import '../assets/styles/components/Form.css';
+
 const Form = () => {
     const [validate, setValidate] = useState({});
     const dispatch = useDispatch();
@@ -24,14 +26,22 @@ const Form = () => {
 
     return(
         <div>
-            <label htmlFor="operation">Operation</label>
-            <input id="operation" name="operation" className="feed__form-input"
-                onChange={handleChange}/>
-            <FormMatrix id="1"/>
-            <button className="feed__form-button" id="matrix-button" type="button"
-                disabled={!validate.isOperation}>
-                {validate.twoMatrix ? "next" : "send"}
+            <form className="form-operation">
+                <div className="feed__form-group feed__form-operation">
+                    <label htmlFor="operation" className="feed__form-label">Operation</label>
+                    <input id="operation" name="operation" className="feed__form-input"
+                        onChange={handleChange}/>
+                </div>
+
+                <div className="feed__form-matrix">
+                    <FormMatrix id="1"/>
+                    <FormMatrix id="2"/>
+                </div>
+
+                <button className="feed__form-button" type="button">
+                send
             </button>
+            </form>
         </div>
     )
 }
