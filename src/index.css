@@ -54,3 +54,6 @@ p {
   background: rgba(200, 0, 0, 0.2);
   height: 1.5rem;
 }
+.ml-2 {
+  margin-left: 2rem;
+}

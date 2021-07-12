@@ -1,22 +1,10 @@
-export const results = (operation) => {
-    switch(operation){
-        case "determinant":
-            return null
-        case "adj":
-            return null
-        case "inverse":
-            return null
-        default:
-            return null
-    }
-}
 const state = {
     isOperation: true,
     twoMatrix: false,
     operation: null
 }
 
-export const validateOperation = (operation) => {
+const validateOperation = (operation) => {
     switch(operation){
         case "determinant":
             return {
@@ -72,3 +60,4 @@ export const validateOperation = (operation) => {
     }
 }
 
+export default validateOperation;
