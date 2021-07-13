@@ -3,6 +3,8 @@ import { useSelector } from "react-redux";
 import { selectMatrix1 } from "../reducers/matrix1"
 import { selectMatrix2 } from "../reducers/matrix2";
 
+import FigureMatrix from "./FigureMatrix";
+
 import '../assets/styles/components/Matrix.css';
 
 const Matrix = (props) => {
@@ -13,13 +15,11 @@ const Matrix = (props) => {
     return(
         <div className="matrix">
             <strong className="matrix__name">{matrix.name.toUpperCase()}=</strong>
-            <div className="matrix__grid"
-                style={{gridTemplateColumns: `repeat(${matrix.columns}, minmax(0, 1fr))`}}>
-                {arrayMatrix.map((el, n) => (
-                    <span key={n}
-                        className="matrix__grid-el">{el}</span>
-                ))}
-            </div>
+            <FigureMatrix matrixObj={{
+                matrix: arrayMatrix,
+                columns: matrix.columns
+            }}
+            />
         </div>
     )
 }

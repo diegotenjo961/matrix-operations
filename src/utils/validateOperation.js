@@ -51,6 +51,16 @@ const validateOperation = (operation) => {
                 ...state,
                 operation: "inverse",
             }
+        case "transposed":
+            return {
+                ...state,
+                operation: "transposed",
+            }
+        case "trans":
+            return {
+                ...state,
+                operation: "transposed",
+            }
         default:
             return {
                 ...state,
