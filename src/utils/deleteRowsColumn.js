@@ -29,7 +29,7 @@ export const deleteRow = (matrixObj, index) => {
             indexFirstRow.shift();
             counter(true);
         }
-        if(indx == index){
+        if(parseInt(indx) === parseInt(index)){
             copyMatrix.splice(indexFirstRow[0], columns);
         }
         counter();
@@ -38,10 +38,18 @@ export const deleteRow = (matrixObj, index) => {
 }
 
 export const deleteColumn = (matrixObj, index) => {
-    const result = deleteRow({
-        ...matrixObj,
-        matrix: transposed(matrixObj)
+    const { rows, columns } = matrixObj;
+    let result = deleteRow({
+        rows: columns,
+        columns: rows,
+        matrix: transposed(matrixObj),
     }, index);
+
+    result = transposed({
+        matrix: result,
+        rows: columns - 1,
+        columns: rows
+    });
 
     return result;
 }

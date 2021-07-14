@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
+
 import validateMatrix from "../utils/validateMatrix";
-import determinant from "../operations/determinant";
-import adj from "../operations/adj";
-import transposed from "../operations/transposed";
-import FigureMatrix from "./FigureMatrix";
+
+import Determinant from "./operations/Determinant";
+import Transposed from "./operations/Transposed";
+import Adj from "./operations/Adj";
 
 import "../assets/styles/components/Results.css";
 
@@ -39,26 +40,13 @@ const Results = (props) => {
 
     switch(operation){
         case "determinant":
-            return( <p className="ml-2 good-text">
-                    DetA = {determinant(response1)}
-                </p>)
+            return <Determinant matrixObj={response1}/>
         case "adj":
-            return (
-                <p>{adj(response1)}</p>
-            )
+            return <Adj matrixObj={response1} />
+        case "transposed":
+            return <Transposed matrixObj={response1} />
         case "inverse":
             return <p>Nose</p>
-        case "transposed":
-            return (
-                <div className="container-transposed good-text">
-                    <p className="container-potency">
-                        <span>A</span><small>t</small> =
-                    </p>
-                    <FigureMatrix matrixObj = {{
-                        matrix: transposed(response1),
-                        columns: response1.rows
-                    }}/>
-                </div>)
         default:
             console.log ("nose")
             return <p>Nose</p>

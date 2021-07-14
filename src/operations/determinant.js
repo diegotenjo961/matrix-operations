@@ -1,11 +1,7 @@
 const determinant = (matrixObj) => {
-    const {matrix, rows, columns} = matrixObj;
+    const { matrix, rows } = matrixObj;
     const M = matrix;
     let det = null;
-
-    if(rows !== columns){
-        return "Sorry but the matrix not is quadratic";
-    }
 
     switch(rows){
         case 1:
