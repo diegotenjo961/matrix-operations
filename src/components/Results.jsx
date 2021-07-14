@@ -5,6 +5,7 @@ import validateMatrix from "../utils/validateMatrix";
 import Determinant from "./operations/Determinant";
 import Transposed from "./operations/Transposed";
 import Adj from "./operations/Adj";
+import Inverse from "./operations/Inverse";
 
 import "../assets/styles/components/Results.css";
 
@@ -46,7 +47,7 @@ const Results = (props) => {
         case "transposed":
             return <Transposed matrixObj={response1} />
         case "inverse":
-            return <p>Nose</p>
+            return <Inverse matrixObj={response1}/>
         default:
             console.log ("nose")
             return <p>Nose</p>

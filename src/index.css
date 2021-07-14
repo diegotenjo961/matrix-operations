@@ -74,3 +74,11 @@ p {
 .container-potency small {
   margin-bottom: .8rem;
 }
+.question {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.question:hover {
+  text-decoration: underline;
+}
