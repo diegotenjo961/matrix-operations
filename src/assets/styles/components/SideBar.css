@@ -1,4 +1,5 @@
 .container__sidebar {
+    padding-top: 110px;
     max-width: 280px;
     width: 100%;
     will-change: transform;

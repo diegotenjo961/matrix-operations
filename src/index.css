@@ -35,8 +35,7 @@ p {
 }
 .container {
   display: flex;
-  margin: auto;
-  padding-top: 110px;
+  margin: 0 auto;
   max-width: 1024px;
   width: 100%;
 }

@@ -61,6 +61,11 @@ const validateOperation = (operation) => {
                 ...state,
                 operation: "transposed",
             }
+        case "transpuesta":
+            return {
+                ...state,
+                operation: "transposed"
+            }
         default:
             return {
                 ...state,

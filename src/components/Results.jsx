@@ -43,7 +43,9 @@ const Results = (props) => {
                     DetA = {determinant(response1)}
                 </p>)
         case "adj":
-            return <p>{adj(response1)}</p>
+            return (
+                <p>{adj(response1)}</p>
+            )
         case "inverse":
             return <p>Nose</p>
         case "transposed":
