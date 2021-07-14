@@ -25,11 +25,11 @@ const FormMatrix = (props) => {
         dispatch(id === "1" ?
             setMatrix1({
                 ...matrix,
-                [e.target.name]: e.target.value
+                [e.target.name]: e.target.value.trim()
             })
             : setMatrix2({
                 ...matrix,
-                [e.target.name]: e.target.value
+                [e.target.name]: e.target.value.trim()
             }))
     }
 

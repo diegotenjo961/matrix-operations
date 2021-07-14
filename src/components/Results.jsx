@@ -6,6 +6,7 @@ import Determinant from "./operations/Determinant";
 import Transposed from "./operations/Transposed";
 import Adj from "./operations/Adj";
 import Inverse from "./operations/Inverse";
+import Multiply from "./operations/Multiply";
 
 import "../assets/styles/components/Results.css";
 
@@ -29,8 +30,6 @@ const Results = (props) => {
         }
     }, [matrix1, matrix2, twoMatrix]);
 
-    console.log(response2);
-
     if(error){
         return <p className="text-danger">{error}</p>;
     }
@@ -48,6 +47,8 @@ const Results = (props) => {
             return <Transposed matrixObj={response1} />
         case "inverse":
             return <Inverse matrixObj={response1}/>
+        case "multiply":
+            return <Multiply obj={{response1, response2}} />
         default:
             console.log ("nose")
             return <p>Nose</p>

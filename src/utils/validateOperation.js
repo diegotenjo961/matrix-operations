@@ -66,6 +66,18 @@ const validateOperation = (operation) => {
                 ...state,
                 operation: "transposed"
             }
+        case "multiply":
+            return {
+                ...state,
+                operation: "multiply",
+                twoMatrix: true,
+            }
+        case "x":
+            return {
+                ...state,
+                operation: "multiply",
+                twoMatrix: true,
+            }
         default:
             return {
                 ...state,
