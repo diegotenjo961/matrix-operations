@@ -9,6 +9,7 @@ import Matrix from "./pages/Matrix";
 import Header from "./components/Header";
 
 import "./assets/styles/darkMoodApp.css";
+import "./assets/styles/query.css";
 
 function App() {
   return (

@@ -21,6 +21,7 @@
 .navigation__items {
     display: flex;
     align-items: center;
+    transform: tranlateX(-200px);
 }
 .navigation__item {
     cursor: pointer;
@@ -56,4 +57,22 @@
 .navigation a {
     text-decoration: none;
     color: #f9f9f9;
+}
+.navigation__close {
+    position: absolute;
+    right: 0;
+    margin: 5px 10px;
+    padding: 5px;
+    border: none;
+    display: none;
+    outline: none;
+    background: none;
+}
+.navigation__hamburger {
+    display: none;
+    background-color: transparent;
+    color: #f9f9f9;
+    border: none;
+    font-size: 1.7rem;
+    margin-top: 10px;
 }

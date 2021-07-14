@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
 
@@ -10,6 +10,7 @@ import navigationItems from '../data/navigationItems';
 import { SiUnrealengine } from 'react-icons/si';
 import { IoMdArrowDropdown } from 'react-icons/io';
 import { BsMoon, BsSun } from 'react-icons/bs';
+import { FiMenu } from "react-icons/fi";
 
 import "../assets/styles/components/Header.css";
 
@@ -19,6 +20,7 @@ const Header = () => {
     const darkMoodObj = useSelector(selectDarkMood);
     const darkMood = darkMoodObj.darkMood;
     const app = document.querySelector(".app");
+    const [toggleDisplayHeader ,setToggleDisplayHeader] = useState(false);
 
     const handleDarkMood = () => {
         if(darkMood === "true"){
@@ -40,9 +42,16 @@ const Header = () => {
 
     return(
         <header className={`navigation ${darkMood === "true" && "navigation__dark-mood"}`}>
+            <button onClick={() => setToggleDisplayHeader(true)}
+                className="navigation__hamburger">
+                <FiMenu />
+            </button>
             <Link to="/" className="navigation__logo">matrix</Link>
-            <nav className="navigation__items">
-                <div>
+            <nav className={`navigation__items ${toggleDisplayHeader && "navigation__items-translate"}`}>
+                <button className="navigation__close" onClick={() => setToggleDisplayHeader(false)}>
+                    X
+                </button>
+                <div className="navigation__container-items">
                     {
                         navigationItems.map(item => {
                             if(item.icon){
@@ -66,7 +75,7 @@ const Header = () => {
                         })
                     }
                 </div>
-                <div>
+                <div className="navigation__item-action">
                     <i  className="navigation__item navigation__item--icon"
                         onClick={handleDarkMood}>
                         {darkMood === "true" ?  <BsMoon /> : <BsSun />}
