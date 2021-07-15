@@ -7,6 +7,7 @@ import Transposed from "./operations/Transposed";
 import Adj from "./operations/Adj";
 import Inverse from "./operations/Inverse";
 import Multiply from "./operations/Multiply";
+import SumMinus from "./operations/SumMinus";
 
 import "../assets/styles/components/Results.css";
 
@@ -49,6 +50,10 @@ const Results = (props) => {
             return <Inverse matrixObj={response1}/>
         case "multiply":
             return <Multiply obj={{response1, response2}} />
+        case "sum":
+            return <SumMinus obj={{response1, response2, operation: "sum"}}/>
+        case "minus":
+            return <SumMinus obj={{response1, response2, operation: "minus"}}/>
         default:
             console.log ("nose")
             return <p>Nose</p>

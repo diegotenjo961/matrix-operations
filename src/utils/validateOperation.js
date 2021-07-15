@@ -78,6 +78,30 @@ const validateOperation = (operation) => {
                 operation: "multiply",
                 twoMatrix: true,
             }
+        case "+":
+            return {
+                ...state,
+                operation: "sum",
+                twoMatrix: true,
+            }
+        case "sum":
+            return {
+                ...state,
+                operation: "sum",
+                twoMatrix: true,
+            }
+        case "-":
+            return {
+                ...state,
+                operation: "minus",
+                twoMatrix: true,
+            }
+        case "minus":
+            return {
+                ...state,
+                operation: "minus",
+                twoMatrix: true,
+            }
         default:
             return {
                 ...state,
