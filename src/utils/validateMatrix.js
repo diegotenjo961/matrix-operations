@@ -14,7 +14,7 @@ const validateMatrix = (matrixObj) => {
             return (`${el} not is a number`);
         }
         else{
-            matrixResolve.push(parseInt(el));
+            matrixResolve.push(parseFloat(el));
         }
     }
     return ({

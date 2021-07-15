@@ -14,7 +14,7 @@ const FormMatrix = (props) => {
 
     const handleChange = (e) => {
         if(e.target.name === "matrix"){
-            const pattern = new RegExp(/^[0-9|-\s]+$/g);
+            const pattern = new RegExp(/^[0-9|.|-\s]+$/g);
             const test = pattern.test(e.target.value);
             setRegMatrix(false);
             if(!test){
