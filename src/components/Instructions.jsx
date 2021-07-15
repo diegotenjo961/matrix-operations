@@ -4,40 +4,31 @@ import { Link } from "react-router-dom";
 function Instructions() {
     return (
         <div>
-            <p>La primer cosa a tener en cuenta es el tipo de operationes: </p>
+            <p>The first thing you have in account is the type operation: </p>
             <ul className="ml-2">
-                <li>Determinante</li>
-                <li>Adjunta</li>
-                <li>Inversa</li>
+                <li>Determinant  <small>det</small></li>
+                <li>Adj</li>
+                <li>Inverse <small>-1</small></li>
             </ul>
-            <p>Estas <strong>tres</strong> operaciones se pueden hacer con matrices
-                cuadraticas de <strong>1x1, 2x2 y 3x3</strong>.</p>
-            <p>Es importante recordar, que las anteriores operaciones solamente se pueden realizar,
-            con una matriz. Por lo que si quiere utilizarlas, se le tendra en cuenta
-            la matriz <strong>A</strong>.</p>
-            <p>Para más información sobre estas operaciones da
-            click <Link to="/documentation"><strong>Aquí</strong>.</Link></p>
+            <p>This <strong>three</strong> operations you can do 
+            with quadratic matrixs <strong>1x1, 2x2, 3x3 and 4x4</strong>.</p>
+            <p>Is importat remember, what before operations just you can do
+            with one matrix. So that I am select the matrix <strong>A</strong>.</p>
+            <p>For more information click <Link to="/documentation"><strong>Here</strong>.</Link></p>
 
-            <p>Las operaciones en las que se tienen en cuenta ambas operaciones son:</p>
+            <p>Also you can do tranposed the matrix. For this just past in the input 
+            operation <strong>tranposed</strong> or just one <strong>T</strong></p>
+            <p>The operations you needed passed both matrixs is:</p>
             <ul className="ml-2">
-                <li>Suma</li>
-                <li>Resta</li>
-                <li>Multiplicacion</li>
+                <li>Sum <small>+</small></li>
+                <li>Minus <small>-</small></li>
+                <li>Multiply <small>x</small></li>
             </ul>
-            <p>Tenga en cuenta que para hacer estas operaciones se deben tener en cuenta ciertas
-                condiciones.</p>
-            <p>Para conecerlas da click <Link to="/documentation"><strong>Aquí.</strong></Link></p>
-
-            <p>Sí desea hacer operaciones entre constantes y matrices, estas son las operaciones permitidas:</p>
-                <ul className="ml-2">
-                    <li>Multiplicacion</li>
-                    <li>División</li>
-                </ul>
             <p>
-                En la matriz <strong>A </strong>
-                pase la matriz y en la matriz <strong>B</strong> solamente coloque un número en
-                el input de matriz
+                For this operations you needed know somethings
+                conditions <Link to="/documentation"><strong>Information Here</strong></Link>
             </p>
+            <big>Remember separate the matrix's numbers for one space</big>
         </div>
     )
 }
