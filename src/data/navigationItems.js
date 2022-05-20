@@ -30,7 +30,7 @@ const navigationItems = [
         id: 5,
         icon: true,
         content: <SiTwitter />,
-        pathname: "https://twitter.com/DiegoTenjo7",
+        pathname: "https://twitter.com/elcokiin",
     }
 ]
 
