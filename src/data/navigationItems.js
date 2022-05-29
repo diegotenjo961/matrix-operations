@@ -24,7 +24,7 @@ const navigationItems = [
         id: 4,
         icon: true,
         content: <AiFillGithub />,
-        pathname: "https://github.com/tenjodiego961/matrix-operations/",
+        pathname: "https://github.com/elcokiin/matrix-operations/",
     },
     {
         id: 5,
